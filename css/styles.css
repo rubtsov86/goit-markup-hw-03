@@ -18,6 +18,9 @@ body {
 /* сброс    */
 
 .list {
+    margin: 0;
+    padding: 0;
+    
     list-style: none;
 }
 
@@ -31,14 +34,26 @@ body {
     color: var(--accent-blue-color);
 }
 
+
 .header .logo {
+    color: currentColor;
+    
     font-family: raleway, sans-serif;
     font-size: 26px;
     line-height: 1.2;
     font-weight: 700;
 }
 
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+}
+
 .site-nav .nav {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
     color: currentColor;
 
     font-size: 14px;
@@ -52,6 +67,24 @@ body {
     text-decoration: none;   
 }
 
+.site-nav-item:not(:first-child) {
+    margin-left: 50px;
+}
+
+
+.site-nav-item {
+    outline: 2px solid tomato;
+}
+
+.contact.list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-item:not(:first-child) {
+    margin-left: 50px;
+}
+
 .contact a {
     color: var(--text-grey-color);
 
@@ -61,13 +94,40 @@ body {
     font-weight: 500;
 }
 
+.container {
+    
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    outline: 2px solid tomato;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+}
+
 /* hero - index.html    */
 
 .hero {
+    padding-bottom: 200px;
+    text-align: center;
+    
     background-color: #2F303A;
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 40px;;
+    
     color: var(--accent-white-color);
 
     font-size: 44px;
@@ -79,6 +139,8 @@ body {
 }
 
 .button {
+    padding: 10px 32px;
+    
     background-color: var(--accent-blue-color);
     color: var(--accent-white-color);
     cursor: pointer;
@@ -88,17 +150,34 @@ body {
     line-height: 1.63;
     letter-spacing: 0.06em;
     font-weight: 700;
+
 }
+
 
 /* особенности - index.html    */
 
+.features.list {
+    display: flex;
+ 
+}
+
+.features-item + .features-item {
+    margin-left: 30px;
+}
+
 .features-title {
+    margin-bottom: 10px;
+    margin-top: 0;
+    
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
 
 .features-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--text-grey-color);
 
     font-size: 14px;
@@ -108,14 +187,39 @@ body {
 /* чем мы занимаемся - index.html    */
 
 .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
 }
 
+.works-list.list {
+    display: flex;
+}
+
+.works-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.works {
+    padding-top: 0;
+}
 /* наша команда - index.html    */
 
+.team.list {
+    display: flex;
+}
+
 .team-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
     color: var(--title-black-color);
 
     font-size: 16px;
@@ -125,11 +229,17 @@ body {
 }
 
 .team-text {
+    margin-top: 0;
+    margin-bottom: 0;
     color: var(--text-grey-color);
 
     font-size: 16px;
     line-height: 1.17;
     text-align: center;
+}
+
+.team-item + .team-item {
+    margin-left: 30px;
 }
 
 .section.staff {
@@ -139,10 +249,15 @@ body {
 /* footer    */
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
     background-color: #2F303A;
 }
 
 .footer address {
+    margin-top: 20px;
+    
     font-style: normal;
 }
 
@@ -169,7 +284,21 @@ body {
     line-height: 1.71;
 }
 
+.footer-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
 /* портфолио    */
+.select.list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.select-item:not(:last-child) {
+    margin-right: 8px;
+
+}
 
 .select button {
     background-color: #F5F4FA;
@@ -184,6 +313,9 @@ body {
 }
 
 .item-title {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    
     color: var(--title-black-color);
 
     font-size: 18px;
@@ -192,10 +324,30 @@ body {
 }
 
 .item-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--text-grey-color);
 
     font-size: 15px;
     line-height: 1.88;   
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+.grid-item {
+    margin-bottom: 50px;
+}
+
+.grid-item:nth-child(n + 7) {
+    margin-bottom: 20px;
 }
 
 /* наведение и фокус    */
@@ -213,7 +365,14 @@ body {
     color: var(--accent-white-color);
 }
 
-
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  
+  }
 
 
 
